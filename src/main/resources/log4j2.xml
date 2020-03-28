@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration status="debug">
+	<Properties>
+		<Property name="log-path">/var/log/hecologs</Property>
+	</Properties>
+
+	<Appenders>
+		<RollingFile name="rollingFileLog" fileName="${log-path}/heco.log"
+			filePattern="${log-path}/heco-%d{yyyy-MM-dd}.log">
+			<PatternLayout>
+				<Pattern>%-7d{yyyy-MM-dd-HH:mm:ss:SSS} [%-5p] [%C] %m%n</Pattern>
+			</PatternLayout>
+			<Policies>
+				<TimeBasedTriggeringPolicy interval="24"
+					modulate="true" />
+				<SizeBasedTriggeringPolicy size="100MB" />
+			</Policies>
+			<DefaultRolloverStrategy max="5" />
+		</RollingFile>
+
+		<Console name="console" target="SYSTEM_OUT">
+			<PatternLayout pattern="%-7d{yyyy-MM-dd-HH:mm:ss:SSS} [%-5p] [%C] %m%n" />
+		</Console>
+	</Appenders>
+
+	<Loggers>
+		<Logger name="org.quartz" level="error" additivity="true">
+		</Logger>
+		<Root level="info">
+			<AppenderRef ref="console" />
+			<AppenderRef ref="rollingFileLog" />
+		</Root>
+	</Loggers>
+</Configuration>
