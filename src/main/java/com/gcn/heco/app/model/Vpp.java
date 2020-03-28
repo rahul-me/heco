@@ -1,7 +1,7 @@
 package com.gcn.heco.app.model;
 
 import org.springframework.stereotype.Component;
-
+// class Vpp
 @Component
 public class Vpp
 {
