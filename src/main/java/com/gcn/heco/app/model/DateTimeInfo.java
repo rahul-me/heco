@@ -7,6 +7,8 @@ import org.springframework.stereotype.Component;
 @Component
 public class DateTimeInfo {
 	
+	// test line
+	
 	static Logger logger = LoggerFactory.getLogger(DateTimeInfo.class);
 
 	private String date;
