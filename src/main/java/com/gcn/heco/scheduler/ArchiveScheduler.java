@@ -11,7 +11,7 @@ import com.gcn.heco.file.service.MiFileControllerService;
 
 
 @Repository
-@PropertySource("file:config/config.properties")
+@PropertySource("classpath:config.properties")
 public class ArchiveScheduler {
 	
 	static Logger logger = LoggerFactory.getLogger(ArchiveScheduler.class);

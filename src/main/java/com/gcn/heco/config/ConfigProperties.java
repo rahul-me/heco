@@ -7,7 +7,7 @@ import org.springframework.context.annotation.PropertySource;
 import org.springframework.stereotype.Component;
 
 @Component
-@PropertySource("file:config/config.properties")
+@PropertySource("classpath:config.properties")
 public class ConfigProperties {
 	
 	static Logger logger = LoggerFactory.getLogger(ConfigProperties.class);

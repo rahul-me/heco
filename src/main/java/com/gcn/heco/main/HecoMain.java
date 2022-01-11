@@ -15,6 +15,8 @@ import org.springframework.scheduling.annotation.EnableScheduling;
 @EnableAsync
 @EnableScheduling
 public class HecoMain {
+	
+	// this is the main class to run spring boot project
 	static Logger logger = LoggerFactory.getLogger(HecoMain.class);
 
 	public static void main(String[] args) {

@@ -16,7 +16,7 @@ import org.springframework.transaction.annotation.EnableTransactionManagement;
 
 @Configuration
 @EnableTransactionManagement
-@PropertySource("file:config/application.properties")
+@PropertySource("classpath:application.properties")
 public class DatabaseConfig {
 	
 	static Logger logger = LoggerFactory.getLogger(DatabaseConfig.class);
